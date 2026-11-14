@@ -1,0 +1,403 @@
+/* ==============================
+   NOIR - SHARED STYLES (all pages)
+================================ */
+
+:root {
+    --night: #17152B;
+    --night-light: #211D3B;
+    --purple: #8438FF;
+    --cyan: #00CFE8;
+    --pink: #FF438A;
+    --white: #FFFFFF;
+    --muted: #B9B6C9;
+    --lime: #D7FF3F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--night);
+    color: var(--white);
+    font-family: 'DM Sans', 'Heebo', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    position: relative;
+}
+
+/* ==============================
+   HEADER
+================================ */
+
+.site-header {
+    width: 100%;
+    min-height: 90px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: var(--night);
+    position: relative;
+     position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: var(--cyan);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.main-nav a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--cyan);
+    bottom: -8px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--white);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.header-button {
+    padding: 13px 20px;
+    border: 1px solid var(--purple);
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.header-button span {
+    color: var(--cyan);
+    margin-left: 8px;
+}
+
+.header-button:hover {
+    background-color: var(--purple);
+    transform: translateY(-3px);
+}
+.site-header .active {
+    color: var(--white);
+}
+
+/* ==============================
+   TYPOGRAPHY HELPERS
+================================ */
+
+.eyebrow {
+    display: block;
+    color: var(--cyan);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* ==============================
+   BUTTONS
+================================ */
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    background-color: var(--purple);
+    padding: 17px 25px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.primary-button span {
+    color: var(--cyan);
+}
+
+.primary-button:hover {
+    background-color: var(--pink);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 67, 138, 0.25);
+}
+
+.outline-button {
+    padding: 15px 22px;
+    border: 1px solid var(--purple);
+    border-radius: 3px;
+    color: var(--purple);
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.outline-button:hover {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.pink-button {
+    display: inline-block;
+    padding: 16px 20px;
+    background-color: var(--pink);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.pink-button:hover {
+    background-color: var(--cyan);
+    color: var(--night);
+    transform: translateY(-4px);
+}
+
+/* ==============================
+   SECTION HEADING (shared by several pages)
+================================ */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 55px;
+}
+
+.section-heading .eyebrow {
+    color: var(--purple);
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 0;
+}
+
+.section-heading h2 span {
+    color: var(--purple);
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 300px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* ==============================
+   FOOTER
+================================ */
+
+.site-footer {
+    padding: 70px 8% 25px;
+    background-color: #100F20;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.footer-brand p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 90px;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-links h4 {
+    color: var(--cyan);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--muted);
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--pink);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: #89869B;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.footer-bottom a {
+    color: var(--cyan);
+}
+.site-footer .footer-top {
+    align-items: center;
+}
+
+.site-footer .footer-top p {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* ==============================
+   ANIMATIONS
+================================ */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ==============================
+   RESPONSIVE - shared
+================================ */
+
+@media screen and (max-width: 1050px) {
+
+    .site-header {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        gap: 18px;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .site-header {
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 5%;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .main-nav a {
+        font-size: 11px;
+    }
+
+    .header-button {
+        display: none;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-heading h2 {
+        font-size: 46px;
+        letter-spacing: -2px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        gap: 45px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}

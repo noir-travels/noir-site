@@ -1,0 +1,98 @@
+/* ==============================
+   NOIR - SUCCESS PAGE
+================================ */
+
+/* ==============================
+   SUCCESS
+================================ */
+
+.success-page {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            #302052,
+            var(--night) 65%
+        );
+}
+
+.success-container {
+    max-width: 650px;
+    text-align: center;
+    animation: fadeUp 1s ease both;
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 35px;
+    border: 2px solid var(--cyan);
+    border-radius: 50%;
+    color: var(--cyan);
+    font-size: 35px;
+    animation: pulseRing 2.4s ease-in-out infinite;
+}
+
+.success-container h1 {
+    font-size: clamp(50px, 8vw, 85px);
+    line-height: 1;
+    margin: 25px 0;
+}
+
+.success-container h1 span {
+    color: var(--cyan);
+}
+
+.success-container p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+    margin: 0 auto 35px;
+    max-width: 480px;
+}
+
+.success-link {
+    display: block;
+    width: fit-content;
+    margin: 25px auto 0;
+    color: var(--muted);
+    font-size: 12px;
+    transition: color 0.3s ease;
+}
+
+.success-link:hover {
+    color: var(--cyan);
+}
+
+@keyframes pulseRing {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 207, 232, 0.45);
+    }
+
+    50% {
+        box-shadow: 0 0 0 18px rgba(0, 207, 232, 0);
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .success-page {
+        padding: 55px 6%;
+    }
+
+    .success-container h1 {
+        font-size: 52px;
+    }
+
+}

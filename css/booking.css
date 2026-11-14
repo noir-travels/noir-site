@@ -1,0 +1,392 @@
+/* ==============================
+   NOIR - BOOKING PAGE
+================================ */
+
+/* ==============================
+   BOOKING - HERO
+================================ */
+
+.booking-hero {
+    height: 65vh;
+    min-height: 480px;
+    max-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.booking-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.booking-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(15, 13, 34, 0.9),
+        rgba(15, 13, 34, 0.25)
+    );
+}
+
+.booking-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    margin-left: 10%;
+    animation: fadeUp 1s ease both;
+}
+
+.booking-hero-content h1 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 1;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.booking-hero-content h1 span {
+    color: var(--cyan);
+}
+
+.booking-hero-content p {
+    max-width: 450px;
+    color: #E1DFEA;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* ==============================
+   BOOKING - FORM
+================================ */
+
+.booking-hero-content h1 {
+    max-width: 850px;
+}
+.booking-section {
+    padding: 100px 8%;
+}
+
+.booking-intro {
+    max-width: 650px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.booking-intro h2 {
+    font-size: clamp(40px, 6vw, 65px);
+    margin-bottom: 20px;
+}
+
+.booking-intro p {
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.booking-form {
+    max-width: 950px;
+    margin: auto;
+    padding: 50px;
+    background-color: var(--night-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.form-section {
+    padding-bottom: 45px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.form-step {
+    color: var(--cyan);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.form-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 15px 0 30px;
+}
+
+.form-description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: -15px;
+    margin-bottom: 25px;
+}
+.form-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 4%;
+}
+
+.form-group {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: #17152B;
+    color: var(--white);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 3px;
+    font-family: 'DM Sans', 'Heebo', sans-serif;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--cyan);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #89869B;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group input[type="date"] {
+    color-scheme: dark;
+}
+
+.form-group input[type="range"] {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    accent-color: var(--purple);
+}
+
+.form-group output {
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* visual validation feedback */
+.form-group input:not([type="date"]):not([type="range"]):not([type="number"]):valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+    border-color: var(--cyan);
+}
+
+.form-group input:not([type="date"]):not([type="range"]):not([type="number"]):invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--pink);
+}
+
+.experience-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 3%;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.experience-options li {
+    width: 48.5%;
+}
+
+.experience-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.experience-option:hover {
+    border-color: var(--purple);
+    background-color: rgba(132, 56, 255, 0.1);
+}
+
+.experience-option:has(input:checked) {
+    border-color: var(--cyan);
+    background-color: rgba(0, 207, 232, 0.08);
+}
+
+.experience-option input {
+    accent-color: var(--purple);
+}
+
+.message-group textarea {
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.reset-button,
+.submit-button {
+    padding: 16px 25px;
+    font-family: 'DM Sans', 'Heebo', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.reset-button {
+    background: transparent;
+    border: 1px solid var(--muted);
+    color: var(--muted);
+}
+
+.reset-button:hover {
+    border-color: var(--pink);
+    color: var(--pink);
+}
+
+.submit-button {
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+}
+
+.submit-button:hover {
+    background-color: var(--pink);
+    transform: translateY(-3px);
+}
+
+.submit-button span {
+    color: var(--cyan);
+    margin-left: 10px;
+}
+
+.form-note {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+.form-note a {
+    color: var(--cyan);
+    text-decoration: underline;
+}
+
+.booking-bottom {
+    padding: 90px 8%;
+    text-align: center;
+    background-color: var(--night-light);
+}
+
+.booking-bottom h2 {
+    font-size: clamp(35px, 5vw, 60px);
+}
+
+.form-group.message-group {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form-group textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+fieldset.form-section {
+    min-width: 0;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0 0 45px;
+}
+
+fieldset.form-section:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.form-section legend {
+    padding: 0;
+}
+
+.form-group input[type="color"] {
+    height: 50px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.form-actions {
+    margin-top: 10px;
+}
+
+/* ==============================
+   RESPONSIVE - booking
+================================ */
+
+@media screen and (max-width: 700px) {
+
+    .booking-hero {
+        min-height: 500px;
+        height: 70vh;
+    }
+
+    .booking-hero-content {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .booking-hero-content h1 {
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .booking-section {
+        padding: 75px 5%;
+    }
+
+    .booking-form {
+        padding: 25px 18px;
+    }
+
+    .form-group,
+    .experience-options li {
+        width: 100%;
+    }
+
+    .form-section h3 {
+        font-size: 27px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .reset-button,
+    .submit-button {
+        width: 100%;
+    }
+
+    .booking-bottom {
+        padding: 75px 6%;
+    }
+
+}

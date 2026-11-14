@@ -1,0 +1,741 @@
+/* ==============================
+   NOIR - HOME PAGE
+================================ */
+
+/* ==============================
+   HERO
+================================ */
+
+.hero {
+    min-height: 650px;
+    height: 85vh;
+    max-height: 850px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: heroZoom 12s ease-out forwards;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 13, 34, 0.9) 0%,
+            rgba(15, 13, 34, 0.55) 48%,
+            rgba(15, 13, 34, 0.05) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(15, 13, 34, 0.55),
+            transparent 40%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    margin-left: 10%;
+    animation: fadeUp 1s ease both;
+}
+.hero-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--cyan);
+}
+
+.live-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--pink);
+    border-radius: 50%;
+    margin-right: 9px;
+    box-shadow: 0 0 12px var(--pink);
+}
+
+.hero h1 {
+    font-size: clamp(65px, 10vw, 145px);
+    line-height: 0.88;
+    font-weight: 800;
+    letter-spacing: -7px;
+    margin: 30px 0;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+}
+
+.hero-content p {
+    max-width: 390px;
+    color: #E1DFEA;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-top: 35px;
+}
+
+.text-button {
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.text-button span {
+    color: var(--cyan);
+    margin-left: 8px;
+}
+
+.text-button:hover {
+    color: var(--pink);
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 30px;
+    left: 7%;
+    right: 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    color: #E1DFEA;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.scroll-indicator {
+    color: var(--cyan);
+}
+
+.hero-side-text {
+    position: absolute;
+    right: 30px;
+    top: 45%;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 9px;
+    letter-spacing: 4px;
+    z-index: 2;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+/* ==============================
+   INTRODUCTION
+================================ */
+
+.intro-section {
+    padding: 130px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    overflow: hidden;
+}
+
+.intro-small {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.section-number {
+    color: var(--pink);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.intro-content {
+    max-width: 650px;
+}
+.intro-content h2 {
+    font-size: clamp(40px, 6vw, 75px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.intro-content h2 span {
+    color: var(--purple);
+}
+
+.intro-content p {
+    max-width: 430px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.underline-link {
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cyan);
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.underline-link span {
+    color: var(--cyan);
+    margin-left: 10px;
+}
+
+.intro-decoration {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--muted);
+    opacity: 0.5;
+    transform: rotate(90deg);
+    transform-origin: center;
+    margin-top: 150px;
+}
+
+/* ==============================
+   FEATURED DESTINATIONS
+================================ */
+
+.destinations-section {
+    background-color: #F2EFF8;
+    color: var(--night);
+    padding: 110px 8%;
+}
+
+.destination-grid {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.destination-card {
+    flex: 1 1 0;
+}
+
+.destination-card.card-large {
+    flex: 1.25 1 0;
+}
+
+.destination-card:nth-child(2) {
+    margin-top: 65px;
+}
+
+.destination-card:nth-child(3) {
+    margin-top: 20px;
+}
+.destination-image {
+    display: block;
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    background-color: var(--night-light);
+}
+
+.card-large .destination-image {
+    height: 420px;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.08);
+}
+
+.image-number {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.card-arrow {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--purple);
+    color: var(--white);
+    transition: 0.3s ease;
+}
+
+.destination-card:hover .card-arrow {
+    background-color: var(--cyan);
+    color: var(--night);
+    transform: rotate(45deg);
+}
+
+.destination-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.location {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #77718C;
+}
+
+.destination-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-top: 7px;
+}
+
+.category-tag {
+    color: var(--purple);
+    border: 1px solid #C9B8E9;
+    padding: 7px 9px;
+    font-size: 8px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* ==============================
+   MYSTERY SECTION
+================================ */
+
+.mystery-section {
+    padding: 130px 10%;
+    display: flex;
+    align-items: center;
+    gap: 9%;
+}
+
+.mystery-image-wrapper {
+    width: 48%;
+    height: 560px;
+    position: relative;
+}
+
+.mystery-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floating-label {
+    position: absolute;
+    bottom: 35px;
+    left: -30px;
+    padding: 15px 20px;
+    background-color: var(--cyan);
+    color: var(--night);
+    font-size: 9px;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.mystery-content {
+    flex: 1;
+    position: relative;
+}
+
+.mystery-content .eyebrow {
+    color: var(--pink);
+}
+
+.mystery-content h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin: 25px 0;
+}
+
+.mystery-content h2 span {
+    color: var(--cyan);
+}
+
+.mystery-content p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+    max-width: 370px;
+    margin-bottom: 30px;
+}
+
+.pink-button {
+    display: inline-block;
+    padding: 16px 20px;
+    background-color: var(--pink);
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.pink-button:hover {
+    background-color: var(--cyan);
+    color: var(--night);
+    transform: translateY(-4px);
+}
+
+.mystery-decoration {
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    color: var(--purple);
+    font-size: 45px;
+    font-weight: 800;
+    opacity: 0.25;
+}
+
+/* ==============================
+   CATEGORIES
+================================ */
+
+.categories-section {
+    padding: 110px 8%;
+    background-color: var(--night-light);
+}
+
+.category-heading p {
+    color: var(--muted);
+    max-width: 270px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 1.2%;
+    list-style: none;
+}
+
+.category-item {
+    flex: 1 1 22%;
+    display: flex;
+}
+
+.category-card {
+    flex: 1;
+    min-height: 300px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        145deg,
+        #292348,
+        #1B1831
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: 0.4s ease;
+}
+
+.category-card:nth-child(2) {
+    background: linear-gradient(145deg, #32204B, #1D1934);
+}
+
+.category-card:nth-child(3) {
+    background: linear-gradient(145deg, #163C50, #1B1831);
+}
+
+.category-card:nth-child(4) {
+    background: linear-gradient(145deg, #48203E, #1D1934);
+}
+
+.category-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--cyan);
+}
+
+.category-icon {
+    color: var(--cyan);
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.category-card:nth-child(even) .category-icon {
+    color: var(--pink);
+}
+
+.category-index {
+    position: absolute;
+    right: 22px;
+    top: 25px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.category-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.category-link {
+    color: var(--cyan);
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* ==============================
+   JOURNEY SECTION
+================================ */
+
+.journey-section {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.journey-background {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            rgba(19, 14, 42, 0.75),
+            rgba(19, 14, 42, 0.85)
+        ),
+        url("../assets/images/tropical-island.jpg") center / cover;
+    transition: transform 1s ease;
+}
+
+.journey-section:hover .journey-background {
+    transform: scale(1.04);
+}
+
+.journey-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 20px;
+}
+
+.journey-content .eyebrow {
+    color: var(--cyan);
+}
+
+.journey-content h2 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.95;
+    letter-spacing: -5px;
+    margin: 30px 0;
+}
+
+.journey-content h2 span {
+    color: var(--pink);
+}
+
+.journey-content .primary-button {
+    margin-top: 15px;
+}
+
+/* ==============================
+   ANIMATIONS
+================================ */
+
+@keyframes heroZoom {
+
+    from {
+        transform: scale(1.08);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+}
+
+/* ==============================
+   RESPONSIVE - home
+================================ */
+
+@media screen and (max-width: 1050px) {
+
+    .destination-grid {
+        flex-wrap: wrap;
+    }
+
+    .destination-card,
+    .destination-card.card-large {
+        flex: 1 1 45%;
+    }
+
+    .destination-card:nth-child(2),
+    .destination-card:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .card-large .destination-image,
+    .destination-image {
+        height: 340px;
+    }
+
+    .category-item {
+        flex-basis: 47%;
+    }
+
+    .intro-decoration {
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .hero {
+        height: 700px;
+        min-height: 600px;
+    }
+
+    .hero-content {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .hero h1 {
+        font-size: clamp(55px, 14vw, 90px);
+        letter-spacing: -4px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .hero-bottom {
+        left: 5%;
+        right: 5%;
+        font-size: 8px;
+    }
+
+    .hero-bottom > span:last-child,
+    .hero-side-text {
+        display: none;
+    }
+
+    .intro-section {
+        padding: 85px 7%;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .intro-content h2 {
+        font-size: 46px;
+        letter-spacing: -2px;
+    }
+
+    .destinations-section,
+    .categories-section {
+        padding: 80px 6%;
+    }
+
+    .destination-grid {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .destination-card,
+    .destination-card.card-large {
+        flex: none;
+        width: 100%;
+    }
+
+    .destination-image,
+    .card-large .destination-image {
+        height: 350px;
+    }
+
+    .mystery-section {
+        padding: 80px 7%;
+        flex-direction: column;
+        gap: 55px;
+    }
+
+    .mystery-image-wrapper {
+        width: 100%;
+        height: 400px;
+    }
+
+    .floating-label {
+        left: 0;
+        bottom: 20px;
+    }
+
+    .mystery-content h2 {
+        font-size: 53px;
+    }
+
+    .mystery-decoration {
+        display: none;
+    }
+
+    .category-grid {
+        gap: 10px 2%;
+    }
+
+    .category-item {
+        flex-basis: 47%;
+    }
+
+    .category-card {
+        min-height: 250px;
+        padding: 17px;
+    }
+
+    .category-card h3 {
+        font-size: 25px;
+    }
+
+    .journey-section {
+        min-height: 500px;
+    }
+
+    .journey-content h2 {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+
+}

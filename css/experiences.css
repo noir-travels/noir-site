@@ -1,0 +1,357 @@
+/* ==============================
+   NOIR - EXPERIENCES PAGE
+================================ */
+
+/* ==============================
+   EXPERIENCES - HERO
+================================ */
+
+.experiences-hero {
+    height: 65vh;
+    min-height: 480px;
+    max-height: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.experiences-hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.experiences-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(15, 13, 34, 0.9),
+        rgba(15, 13, 34, 0.25)
+    );
+}
+
+.experiences-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    margin-left: 10%;
+    animation: fadeUp 1s ease both;
+}
+
+.experiences-hero-content h1 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 1;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.experiences-hero-content h1 span {
+    color: var(--cyan);
+}
+
+.experiences-hero-content p {
+    max-width: 450px;
+    color: #E1DFEA;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* ==============================
+   EXPERIENCES - INTRODUCTION
+================================ */
+
+.experiences-intro {
+    padding: 110px 10%;
+    text-align: center;
+}
+
+.experiences-intro h2 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.experiences-intro h2 span {
+    color: var(--cyan);
+}
+
+.experiences-intro p {
+    max-width: 600px;
+    margin: auto;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* ==============================
+   EXPERIENCES - LIST
+================================ */
+
+.experience-list {
+    padding: 100px 8%;
+    background-color: var(--night-light);
+}
+
+.experience-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 55px 4%;
+}
+
+.experience-card {
+    width: 48%;
+    overflow: hidden;
+}
+
+.experience-image-wrapper {
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.experience-card:hover img {
+    transform: scale(1.07);
+}
+
+.experience-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.experience-card-content {
+    padding: 25px 5px;
+}
+
+.experience-category {
+    color: var(--cyan);
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.experience-card-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.experience-card-content p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 420px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.text-link span {
+    color: var(--cyan);
+    margin-left: 8px;
+}
+
+/* ==============================
+   EXPERIENCES - FEATURE
+================================ */
+
+.experience-feature {
+    display: flex;
+    align-items: center;
+    gap: 8%;
+    padding: 110px 10%;
+}
+
+.experience-feature-image {
+    width: 50%;
+    height: 480px;
+}
+
+.experience-feature-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.experience-feature-content {
+    flex: 1;
+}
+
+.experience-feature-content h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.experience-feature-content p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+/* ==============================
+   EXPERIENCES - VIDEO
+================================ */
+
+.experience-video {
+    display: flex;
+    align-items: center;
+    gap: 6%;
+    padding: 100px 10%;
+    background-color: var(--night-light);
+}
+
+.experience-video-player {
+    width: 55%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: #000;
+}
+
+.experience-video-content {
+    flex: 1;
+}
+
+.experience-video-content h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.experience-video-content p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.experience-includes {
+    list-style: none;
+}
+
+.experience-includes li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 13px;
+}
+
+.experience-includes li::before {
+    content: "✦";
+    color: var(--cyan);
+    margin-inline-end: 12px;
+}
+
+.experience-includes li:nth-child(even)::before {
+    color: var(--pink);
+}
+
+/* ==============================
+   EXPERIENCES-CTA - CALL TO ACTION
+================================ */
+
+.experiences-cta {
+    padding: 100px 8%;
+    text-align: center;
+    
+}
+
+.experiences-cta h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    margin-bottom: 20px;
+}
+
+.experiences-cta p {
+    color: var(--muted);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* ==============================
+   RESPONSIVE - experiences
+================================ */
+
+@media screen and (max-width: 1050px) {
+
+    .experience-feature,
+    .experience-video {
+        gap: 5%;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) {
+
+    .experiences-hero {
+        min-height: 500px;
+        height: 70vh;
+    }
+
+    .experiences-hero-content {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .experiences-hero-content h1 {
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .experiences-intro {
+        padding: 75px 7%;
+    }
+
+    .experience-list {
+        padding: 75px 6%;
+    }
+
+    .experience-card {
+        width: 100%;
+    }
+
+    .experience-image-wrapper {
+        height: 300px;
+    }
+
+    .experience-feature,
+    .experience-video {
+        flex-direction: column;
+        padding: 75px 7%;
+        gap: 35px;
+    }
+
+    .experience-feature-image,
+    .experience-video-player {
+        width: 100%;
+    }
+
+    .experience-feature-image {
+        height: 350px;
+    }
+
+    .experiences-cta {
+        padding: 75px 6%;
+    }
+
+}
